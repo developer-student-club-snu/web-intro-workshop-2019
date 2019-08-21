@@ -2,15 +2,36 @@
 {
 	box-sizing: border-box;
 }
+
 div#topbar
 {
 	background-color: black;
 	width: 100%;
-	height: 100px;
 	padding: 0 30px;
 	border-bottom: 3px solid yellow;
+	overflow: hidden;
+	position: relative;
+}
+div#topbar > img
+{
+	padding: 20px;
+	height: 120px;
+	float: left;
 }
 body
 {
 	margin: 0;
+}
+#linksContainer
+{
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 20px;
+}
+a.linked
+{
+	color: white;
+	text-decoration: none;
 }
