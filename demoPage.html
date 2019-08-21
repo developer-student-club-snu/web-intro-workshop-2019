@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		div
+		{
+			background-color: black;
+			color: white;
+		}
+		/*div + span
+		{
+			color: yellow;
+		}*/
+
+		div > span
+		{
+			color: red;
+		}
+
+		span{
+			color: white !important;
+		}
+
+		div#particularDiv
+		{
+			background-color: red; 
+			padding: 40px; 
+			width: 100%;
+		}
+
+		.someClass
+		{
+			margin: 40px;
+		}
+	</style>
+</head>
+<body>
+	<span class="someClass">Hey 2</span>
+	<div id="particularDiv">Hey 3</div>
+	<div class="someClass">
+		<span style="display: block">Hey 4</span>
+		<h1 style="display: inline" class="someClass">Heading 1</h1>
+	</div>
+	<span>Hey 1</span>
+</body>
+</html>

@@ -1,0 +1,16 @@
+*
+{
+	box-sizing: border-box;
+}
+div#topbar
+{
+	background-color: black;
+	width: 100%;
+	height: 100px;
+	padding: 0 30px;
+	border-bottom: 3px solid yellow;
+}
+body
+{
+	margin: 0;
+}
