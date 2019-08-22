@@ -1,20 +1,22 @@
-*
+* /* Matches all the elements */
 {
-	box-sizing: border-box;
+	box-sizing: border-box; /* Now, the properties width and height refer to the width and height of the border-box, instead of the default content-box */
 }
 
 div#topbar
 {
 	background-color: black;
 	width: 100%;
-	padding: 0 30px;
+	padding: 0 30px; /* Top and Bottom get 0 padding, while left and right get 30px padding */
 	border-bottom: 3px solid yellow;
-	overflow: hidden;
-	position: relative;
+	overflow: hidden; /* Forcing the topbar to included the floated children */
+	position: relative; /* Making it relative, so that the children positioned absolutely refer to the topbar when using top, left, bottom and right positionings */
 }
+/* The topbar not having a defined height is so that it becomes just tall enough to hold it's contents */
+
 div#topbar > img
 {
-	padding: 20px;
+	padding: 20px; /* So that the image doesn't touch the edges */
 	height: 120px;
 	float: left;
 }
@@ -24,10 +26,14 @@ body
 }
 #linksContainer
 {
-	position: absolute;
+	position: absolute; /* Positioning relative to the topbar */
+
 	right: 0;
+
+	/* Below: Centre aligning it vertically, relative to the topbar */
 	top: 50%;
 	transform: translateY(-50%);
+
 	font-size: 20px;
 }
 a.linked
