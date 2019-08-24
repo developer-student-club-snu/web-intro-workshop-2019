@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo Page 2</title>
+	<style type="text/css">
+		@keyframes snowfall{
+			0%{
+				top: 0;
+			}
+			100%{
+				top: 100%;
+			}
+		}
+		body{
+			background-color: black;
+		}
+		div
+		{
+			border-radius: 50%;
+			background-color: white;
+			position: fixed;
+			top: 0;
+
+			animation: snowfall 3s infinite;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+
+<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>	<script type="text/javascript" defer>
+		document.querySelectorAll("div").forEach(function(item, index){
+			let size = Math.random() * 50;
+			item.style.width = size + "px";
+			item.style.height = size + "px";
+
+			let leftV = Math.random() * window.innerWidth;
+			item.style.left = leftV + "px";
+
+			let op = Math.random()* 0.5 + 0.5;
+			item.style.opacity = op;
+
+			item.style.animationDelay = (Math.random() * 3) + "s";
+		})
+	</script>
+</body>
+</html>

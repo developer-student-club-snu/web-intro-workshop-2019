@@ -12,12 +12,19 @@ div#topbar
 {
 	background-color: black;
 	width: 100%;
-	padding: 0 30px; /* Top and Bottom get 0 padding, while left and right get 30px padding */
 	border-bottom: 3px solid yellow;
 	overflow: hidden; /* Forcing the topbar to included the floated children */
-	position: relative; /* Making it relative, so that the children positioned absolutely refer to the topbar when using top, left, bottom and right positionings */
+	position: sticky; /* Making it relative, so that the children positioned absolutely refer to the topbar when using top, left, bottom and right positionings */
+	top: 0;
+	padding: 40px 30px;
+
+	transition-duration: 0.3s;
 }
 /* The topbar not having a defined height is so that it becomes just tall enough to hold it's contents */
+div#topbar.shrink
+{
+	padding: 10px 30px;
+}
 
 div#topbar > img
 {
@@ -86,6 +93,26 @@ iframe
 	vertical-align: top;
 	text-align: justify;
 }
+#itemsContainer
+{
+	display: inline-block;
+	max-width: 800px;
+	width: 100%;
+	text-align: left;
+	font-size: 0;
+}
+.item
+{
+	display: inline-block;
+	width: 25%;
+	padding: 15px;
+	font-size: 15px;
+}
+.item > img
+{
+	width: 100%;
+	border-radius: 5px;
+}
 
 @media screen and (max-width: 700px)
 {
@@ -105,4 +132,11 @@ iframe
 	{
 		display: none;
 	}
+	.item
+	{
+		width: 50%;
+	}
+
 }
+
+#topbar
