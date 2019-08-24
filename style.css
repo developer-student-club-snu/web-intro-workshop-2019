@@ -3,6 +3,11 @@
 	box-sizing: border-box; /* Now, the properties width and height refer to the width and height of the border-box, instead of the default content-box */
 }
 
+body
+{
+	text-align: center;
+}
+
 div#topbar
 {
 	background-color: black;
@@ -28,7 +33,7 @@ body
 {
 	position: absolute; /* Positioning relative to the topbar */
 
-	right: 0;
+	right: 30px;
 
 	/* Below: Centre aligning it vertically, relative to the topbar */
 	top: 50%;
@@ -40,4 +45,64 @@ a.linked
 {
 	color: white;
 	text-decoration: none;
+}
+
+a.linked:hover
+{
+	color: yellow;
+}
+
+a#banner
+{
+	display: inline-block;
+	padding: 20px 0;
+}
+
+a#banner > img,
+#YoutubeContainer
+{
+	width: 100vw;
+	max-width: 800px;
+}
+
+iframe
+{
+	width: 400px;
+	height: calc(400px / 1.6);
+	vertical-align: top;
+}
+
+#YoutubeContainer
+{
+	display: inline-block;
+	font-size: 0;
+}
+#YTDesc
+{
+	display: inline-block;
+	width: 400px;
+	font-size: 20px;
+	padding: 10px;
+	vertical-align: top;
+	text-align: justify;
+}
+
+@media screen and (max-width: 700px)
+{
+	iframe, #YTDesc
+	{
+		width: 100%;
+	}
+	#YoutubeContainer
+	{
+		padding: 10px;
+	}
+	a#banner > img
+	{
+		padding: 10px;
+	}
+	#linksContainer
+	{
+		display: none;
+	}
 }
